@@ -2,15 +2,10 @@
 
 function divisible_by_three(int $max, int $min): array 
 {
-	$arr_result = [];
-	
-	for($i = $min; $i <= $max; $i ++){
-		if($i % 3 == 0){
-			$arr_result[] = $i;
-		}
-	}
-	return 	$arr_result;
-
+	return array_reverse(array_filter(
+		range($min, $max),
+		fn($n) => ($n % 3 == 0) ? $n : false
+	));
 }
 
 $arr = array(12, 9, 6, 3);
