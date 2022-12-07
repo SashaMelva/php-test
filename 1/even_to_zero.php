@@ -1,6 +1,6 @@
 <?php
 
-function even_to_zero(int $number)
+function even_to_zero1(int $number)
 {
 	$str_numder = (string)$number;
 	$count_number = strlen($str_numder);
@@ -25,6 +25,25 @@ function even_to_zero(int $number)
 		$number = (int)$number - (floor($number / $i) * $i);
 		$count_number = $count_number - 1;
 	}
+	$result = implode("", $arr_result);
+	return $result;
+}
+function even_to_zero(int $number)
+{
+	$str_numder = (string)$number;
+	
+	$arr_number = str_split($str_numder);
+	$arr_result = [];
+	
+	for($i = 0; $i < count($arr_number); $i ++){
+			if($i % 2 == 0){
+				$arr_result[] = $arr_number[$i];
+				
+			}else{
+				$arr_result[] = 0;
+			}
+		}
+		
 	$result = implode("", $arr_result);
 	return $result;
 }
