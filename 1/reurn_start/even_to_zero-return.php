@@ -23,14 +23,17 @@ function even_to_zero(int $number)
 		}
 		
 		$number = (int)$number - (floor($number / $i) * $i);
+		
 		$count_number = $count_number - 1;
+		
+		
 	}
 	$result = implode("", $arr_result);
-	return $result;
+	echo $result;
+
 }
 
 
-assert(even_to_zero(1234567) == 1030507);
-assert(even_to_zero(123456) == 103050);
+even_to_zero(1234567);
 
 ?>

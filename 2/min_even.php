@@ -8,11 +8,13 @@ function min_even(array $arr): int
 		if($i % 2 == 0){
 			$arr_result[] = $i;
 		}
+		
 	}
-	return min($arr_result);
-}
 
+	return min($arr_result);
+
+}
 $arr = array(1, 23, 6, 10);
-assert(min_even($arr) == 6);
+print_r (min_even($arr));
 
 ?>

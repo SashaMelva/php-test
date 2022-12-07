@@ -3,7 +3,7 @@
 function min_sum_elements(array $arr): array 
 {
 	for($i = 0; $i < count($arr) - 1; $i ++){
-        
+	
         $arr_result[] = array($arr[$i] + $arr[$i + 1] => array($arr[$i] , $arr[$i + 1]));
     }
     
